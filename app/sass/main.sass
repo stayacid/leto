@@ -2,12 +2,12 @@
 @import "colors"
 
 body
-    background: url(../img/bg.jpg) fixed
-    background-size: cover
     background-color: $bg
-    overflow-x: hidden
+    background-size: cover
+    background: url(../img/bg.jpg) fixed
     font-family: "Segoe UI Black", sans-serif
     font-weight: 400
+    overflow-x: hidden
 
 .header-logo
     margin-top: 20px
@@ -15,85 +15,88 @@ body
 
 .header
     &-plane
-        width: 232px
-        height: 85px
+        animation: header-plane 16s linear infinite
         background-image: url(../img/plane.png)
+        height: 85px
+        left: -232px
         position: absolute
         top: 53px
-        left: -232px
-        animation: header-plane 16s linear infinite
+        width: 232px
 
 .main
-    text-align: center
-    margin-top: 25px
     margin-bottom: 45px
+    margin-top: 25px
+    text-align: center
     &-offer //Предложение, от которого вы не сможете отказаться
-        font-size: 50px
         color: $main-text
-        text-transform: uppercase
+        font-size: 50px
         letter-spacing: 0.61px
         margin-bottom: 100px
+        text-transform: uppercase
         &_big
             font-size: 58px
             letter-spacing: 0.7px
         &_price
             color: $accent-text
-            letter-spacing: 0.96px
             font-size: 79px
+            letter-spacing: 0.96px
             &-rub
                 font-weight: 800
-    &-agree
-        background-image: url(../img/wood.png)
-        width: 575px
-        height: 204px
-        display: flex
+    &-agree //Бревно
         align-items: center
+        background-image: url(../img/wood.png)
+        display: flex
+        height: 204px
         justify-content: center
         position: relative
+        width: 575px
+        margin-bottom: 65px
         &_button //Кнопка, очевидно
             background-color: $agree-button
-            text-decoration: none
-            width: 385px
-            height: 110px
-            border: 10px solid $border
+            background-image: url(../img/button_bg.jpg)
             border-radius: 12px
-            box-shadow: -2px 1px 2px 1px rgba(3, 20, 21, 0.82)
-            position: relative
+            border: 10px solid $border
+            box-shadow: -2px 1px 2px 1px rgba(3, 20, 21, 0.82), /* inset 9px -9px 0px 0px #ad6327, inset -9px 9px 0px 0px #fbb76f,  */
             box-sizing: border-box
-            box-shadow: inset 9px -9px 0px 0px #ad6327, inset -9px 9px 0px 0px #fbb76f
+            height: 110px
             margin-bottom: 20px
             margin-left: 50px
+            position: relative
+            text-decoration: none
+            width: 405px
             &:active
                 background-color: $active-button
+                background-image: none
                 box-shadow: inset -6px 6px 2px rgba(0, 0, 0, 0.35)
             &::before
-                content: ''
                 background-color: #fff
-                width: 100%
-                height: 100%
+                content: ''
                 display: block
+                filter: blur(15px)
+                height: 100%
+                left: 0
+                opacity: 0
                 position: absolute
                 top: 0
-                left: 0
-                filter: blur(15px)
-                opacity: 0
                 transition: all .2s
+                width: 100%
             &:hover::before
                 opacity: 0.2
             &-text
-                padding-top: 4px
-                font-size: 73px
-                text-transform: uppercase
                 background: linear-gradient(15deg, #bd0500 15%, #eb0600 50%, #f42100)
                 color: $accent-text
-                -webkit-background-clip: text
-                -webkit-text-fill-color: transparent
+                font-size: 73px
+                padding-top: 4px
+                text-transform: uppercase
+                left: 0
                 line-height: 73px
                 position: absolute
-                width: 100%
-                left: 0
                 top: 0
                 transition: all .2s
+                width: 100%
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+                z-index: 3
                 &:hover
                     background: linear-gradient(15deg, #a62718 15%, #bd0707 50%, #db2207)
                     -webkit-background-clip: text
@@ -102,85 +105,127 @@ body
                     background: linear-gradient(90deg, #d6ff32 15%, #efff7f 50%, #adff00)
                     -webkit-background-clip: text
                     -webkit-text-fill-color: transparent
+            &:hover~.main-agree_crab-container, 
+                animation-play-state: paused
+            &:hover~.main-agree_crab-container .main-agree_crab-container-foot-left
+                animation: 0
+            &:hover~.main-agree_crab-container .main-agree_crab-container-foot-right
+                transform:  translate(0px,10px)
+                animation: foot-right-hover 2s linear 1s infinite
+            &:hover~.main-agree_crab-container .main-agree_crab-container-hand-right
+                animation: hand-right-hover 1.5s linear
+
         &_crab-container //Крабэ
-            position: absolute
-            top: -60px
-            left: 150px
-            width: 155px
-            height: 175px
             animation: crab-container 3s linear infinite
             cursor: pointer
+            height: 175px
+            left: 150px
+            position: absolute
+            top: -60px
+            width: 155px
             &-body
+                animation: crab-body 3s linear infinite
                 background-image: url(../img/crab/body.png)
-                width: 79px
+                bottom: -5px
                 height: 45px
                 position: absolute
-                bottom: -5px
                 right: 12px
-                animation: crab-body 3s linear infinite
+                width: 79px
             &-shell
                 width: 98px
                 height: 116px
                 background-image: url(../img/crab/shell.png)
                 position: absolute
             &-foot-right, &-foot-left
-                width: 50px
-                height: 65px
+                animation: foot-right .2s linear infinite
                 background-image: url(../img/crab/foot-right.png)
                 bottom: -30px
+                height: 65px
+                position: absolute
                 right: -29px
-                position: absolute
-                transform-origin: 0% 100%
-                animation: foot-right 1s linear infinite
+                transform-origin: 0% 50%
+                width: 50px
             &-foot-left
+                animation: foot-left .2s linear infinite
                 background-image: url(../img/crab/foot-left.png)
-                right: 0
                 left: -26px
-                transform-origin: 100% 100%
-                animation: foot-left 1s linear infinite
-            &-eye-right
-                width: 20px
-                height: 17px
+                transform-origin: 100% 50%
+            &-eye-right, &-eye-left
                 background-image: url(../img/crab/eye-right.png)
-                position: absolute
                 bottom: 1px
-                left: 51px
-            &-eye-left
-                width: 20px
                 height: 17px
-                background-image: url(../img/crab/eye-left.png)
+                left: 51px
                 position: absolute
-                bottom: 1px
+                width: 20px
+            &-eye-left
+                background-image: url(../img/crab/eye-left.png)
                 left: 24px
             &-eye-eye-left
-                width: 12px
-                height: 8px
+                animation: eye-eye 1.5s linear infinite
                 background-image: url(../img/crab/eye-eye.png)
-                position: absolute
                 bottom: 10px
+                height: 8px
                 left: 22px
-                animation: eye-eye-left 2s linear infinite
-            &-eye-eye-right
+                position: absolute
                 width: 12px
-                height: 8px
-                background-image: url(../img/crab/eye-eye.png)
-                position: absolute
-                bottom: 10px
-                right: 25px
+            &-eye-eye-right
                 animation: eye-eye 2s linear infinite
+                background-image: url(../img/crab/eye-eye.png)
+                bottom: 10px
+                height: 8px
+                position: absolute
+                right: 25px
+                width: 12px
             &-hand-left
-                width: 59px
-                height: 43px
-                background-image: url(../img/crab/hand-left.png)
-                position: absolute
-                bottom: -28px
-                left: -10px
                 animation: hand-left 2s linear infinite
-            &-hand-right
-                width: 59px
-                height: 43px
-                background-image: url(../img/crab/hand-right.png)
-                position: absolute
+                background-image: url(../img/crab/hand-left.png)
                 bottom: -28px
-                right: -13px
+                height: 43px
+                left: -10px
+                position: absolute
+                width: 59px
+            &-hand-right
                 animation: hand-right 2s linear infinite
+                background-image: url(../img/crab/hand-right.png)
+                bottom: -28px
+                height: 43px
+                position: absolute
+                right: -13px
+                width: 59px
+
+    &-tour
+        box-shadow: inset 0 0 0 10px #fff
+        border-radius: 50%
+        width: 251px
+        height: 251px
+        box-sizing: border-box
+        &-1
+            background-image: url(../img/tour-1.png)
+            background-position: 50% 50%
+        &-2
+            background-image: url(../img/tour-2.png)
+            background-position: 50% 50%
+        &-3
+            background-image: url(../img/tour-3.png)
+            background-position: 50% 50%
+        &-4
+            background-image: url(../img/tour-4.png)
+            background-position: 50% 50%
+        &-bg
+            position: relative
+            &-border
+                border: 10px solid #fff
+                width: 100%
+                height: 200px
+                border-radius: 20px
+                box-shadow: -8px 8px 2px 1px rgba(0, 0, 0, 0.5), inset -8px 8px 2px 1px rgba(3, 11, 22, 0.5)
+                position: absolute
+                left: 0
+                margin-bottom: 50px
+                legend
+                    text-shadow: -5px 4px 4px rgba(3, 11, 22, 0.8)
+                    color: #fff
+                    font-size: 60px
+                    text-transform: uppercase
+                    letter-spacing: 0.73px
+                    padding: 0 12px
