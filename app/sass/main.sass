@@ -109,6 +109,7 @@ body
             width: 155px
             height: 175px
             animation: crab-container 3s linear infinite
+            cursor: pointer
             &-body
                 background-image: url(../img/crab/body.png)
                 width: 79px
@@ -116,26 +117,27 @@ body
                 position: absolute
                 bottom: -5px
                 right: 12px
-                //animation: crab-body 3s linear infinite
+                animation: crab-body 3s linear infinite
             &-shell
                 width: 98px
                 height: 116px
                 background-image: url(../img/crab/shell.png)
                 position: absolute
-            &-foot-right
+            &-foot-right, &-foot-left
                 width: 50px
                 height: 65px
                 background-image: url(../img/crab/foot-right.png)
-                bottom: -31px
+                bottom: -30px
                 right: -29px
                 position: absolute
+                transform-origin: 0% 100%
+                animation: foot-right 1s linear infinite
             &-foot-left
-                width: 50px
-                height: 65px
                 background-image: url(../img/crab/foot-left.png)
-                position: absolute
-                bottom: -30px
+                right: 0
                 left: -26px
+                transform-origin: 100% 100%
+                animation: foot-left 1s linear infinite
             &-eye-right
                 width: 20px
                 height: 17px
@@ -157,6 +159,7 @@ body
                 position: absolute
                 bottom: 10px
                 left: 22px
+                animation: eye-eye-left 2s linear infinite
             &-eye-eye-right
                 width: 12px
                 height: 8px
@@ -164,6 +167,7 @@ body
                 position: absolute
                 bottom: 10px
                 right: 25px
+                animation: eye-eye 2s linear infinite
             &-hand-left
                 width: 59px
                 height: 43px
@@ -171,6 +175,7 @@ body
                 position: absolute
                 bottom: -28px
                 left: -10px
+                animation: hand-left 2s linear infinite
             &-hand-right
                 width: 59px
                 height: 43px
@@ -178,5 +183,4 @@ body
                 position: absolute
                 bottom: -28px
                 right: -13px
-
-            
+                animation: hand-right 2s linear infinite

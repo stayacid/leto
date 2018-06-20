@@ -21,8 +21,60 @@
 
 @keyframes crab-body
     0%
-        transform: translate(0)
-    50%
-        transform: translate(230px)
+        transform: translateY(0)
+    25%
+        transform: translateY(5px)
+    75%
+        transform: translateY(-2px)
     100%
-        transform: translate(0)
+        transform: translateY(0)
+
+@keyframes foot-left
+  0% 
+    transform:  translate(0)  rotate(0deg)
+  25% 
+    transform:  translate(0px,-25px)  rotate(15deg)
+  50%
+    transform:  translate(0)  rotate(0deg)
+  75%
+    transform:  translate(0px,-25px)  rotate(15deg)
+  100%
+    transform:  translate(0)  rotate(0deg)
+
+@keyframes foot-right
+  0% 
+    transform:  translate(0)  rotate(0deg)
+  25% 
+    transform:  translate(0,-25px)  rotate(-15deg)
+  50%
+    transform:  translate(0)  rotate(0deg)
+  75%
+    transform:  translate(0,-25px)  rotate(-15deg)
+  100% 
+    transform:  translate(0)  rotate(0deg)
+
+@keyframes eye-eye
+  0% 
+    transform: scaleX(1.00) scaleY(1.00) 
+  50% 
+    transform: scaleX(1.25) scaleY(1.25) 
+  100% 
+    transform: scaleX(1.00) scaleY(1.00)
+
+@keyframes hand-left
+    0%
+        transform: translateY(0)
+    25%
+        transform: translateY(2px)
+    75%
+        transform: translateY(-2px)
+    100%
+        transform: translateY(0)
+
+@keyframes hand-right
+    0%
+        transform: translateY(2px)
+    50%
+        transform: translateY(0)
+    100%
+        transform: translateY(2px)
