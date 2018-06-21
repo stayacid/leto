@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Leto</title>
     <link rel="stylesheet" href="./css/bootstrap-grid.min.min.css">
@@ -15,10 +15,10 @@
     <header class="header">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12">
+                <div class="col-sm-6">
                     <div class="header-logo">
                         <a href="#">
-                            <img src="img/logo.png" alt="Маркетинговое агентство Лето">
+                            <img class="img-responsive" src="img/logo.png" alt="Маркетинговое агентство Лето">
                         </a>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
     <main class="main">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-auto">
+                <div class="col-12">
                     <h2 class="main-offer">Успей приобрести!
                         <br>
                         <span class="main-offer_big">путевки от
@@ -47,7 +47,7 @@
             </div>
             <!-- row justify-content-center -->
             <div class="row justify-content-center">
-                <div class="col-auto">
+                <div class="col-lg-8 col-sm-7">
                     <div class="main-agree align-items-end">
                         <a href="#" class="main-agree_button">
                             <span class="main-agree_button-text">в лето</span>
@@ -78,15 +78,17 @@
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-12 р-0">
-                    <div class="main-tour-bg">
-                        <fieldset class="main-tour-bg-border">
-                            <legend align="center">Путевки:</legend>
+                <div class="col-xl-12 p-0">
+                    <div class="main-tour_bg">
+                        <fieldset class="main-tour_bg-border">
+                            <legend align="center"></legend>
                         </fieldset>
+                        <p class="main-tour_bg-text">Путевки:</p>
                     </div>
                 </div>
-                <div class="main-tour_wrapper">
-                    <div class="main-tour_wrapper-item">
+            </div>
+            <!-- <div class="col-12 main-tour_wrapper"> -->
+            <!--                     <div class="main-tour_wrapper-item">
                         <div class="main-tour main-tour-1">
                             <div class="main-tour-text">
                                 <p>Заводная</p>
@@ -117,18 +119,46 @@
                                 <p class="main-tour-text_small">18.07.2016 - 31.07.2016</p>
                             </div>
                         </div>
+                    </div> -->
+            <div class="row no-gutters main-tour_wrapper ">
+                <div class="col-md-3 col-sm-6 main-tour main-tour-1">
+                    <div class="main-tour-text">
+                        <p>Заводная</p>
+                        <p class="main-tour-text_small">01.06.2016 - 15.06.2016</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 main-tour main-tour-2">
+                    <div class="main-tour-text">
+                        <p>Солнечная</p>
+                        <p class="main-tour-text_small">16.06.2016 - 30.06.2016</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 main-tour main-tour-3">
+                    <div class="main-tour-text">
+                        <p>золотой песок</p>
+                        <p class="main-tour-text_small">01.07.2016 - 17.07.2016</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 main-tour main-tour-4">
+                    <div class="main-tour-text">
+                        <p>курортная</p>
+                        <p class="main-tour-text_small">18.07.2016 - 31.07.2016</p>
                     </div>
                 </div>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <footer class="footer">
-                        <div class="footer-turtle"><img src="../img/turtle.png" alt="Черепашка"></div>
-                        <p>торопитесь, пока все не разобрали!</p>
-                    </footer>
-                </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <footer class="footer">
+                    <div class="footer-turtle">
+                        <img src="../img/turtle.png" alt="Черепашка">
+                    </div>
+                    <p>торопитесь, пока все не разобрали!</p>
+                </footer>
             </div>
+        </div>
 
 
 
