@@ -4,7 +4,7 @@
 body
     background-color: $bg
     background-size: cover
-    background: url(../img/bg.jpg) fixed
+    background: url(../img/bg.jpg)
     font-family: "Segoe UI Black", sans-serif
     font-weight: 400
     overflow-x: hidden
@@ -15,6 +15,9 @@ body
 .header-logo
     margin-top: 20px
     text-align: center
+
+.р-0 //убрать паддинги у колонки (потому что используется только сетка бутстрап)
+    padding: 0
 
 .header
     &-plane
@@ -55,8 +58,8 @@ body
         width: 575px
         margin-bottom: 65px
         &_button //Кнопка, очевидно
-            background-color: $agree-button
-            background-image: url(../img/button_bg.jpg)
+            //background-color: $agree-button
+            //background-image: url(../img/button_bg.jpg)
             border-radius: 12px
             border: 10px solid $border
             box-shadow: -2px 1px 2px 1px rgba(3, 20, 21, 0.82), /* inset 9px -9px 0px 0px #ad6327, inset -9px 9px 0px 0px #fbb76f,  */
@@ -67,6 +70,7 @@ body
             position: relative
             text-decoration: none
             width: 405px
+            z-index: 2
             &:active
                 background-color: $active-button
                 background-image: none
@@ -84,7 +88,46 @@ body
                 transition: all .2s
                 width: 100%
             &:hover::before
-                opacity: 0.2
+                opacity: 0.5
+            &_bg
+               background-color: $agree-button
+               height: 73px
+               width: 366px
+               top: 9px
+               left: 9px
+               position: absolute
+            &_bg-up
+                border-top: 50px solid #fcd293
+                border-left: 50px solid transparent
+                border-right: 50px solid transparent
+                height: 0
+                width: 384px
+                position: absolute
+                top: 0
+            &_bg-down
+                border-bottom: 50px solid #ad6327
+                border-left: 50px solid transparent
+                border-right: 50px solid transparent
+                height: 0
+                width: 384px
+                position: absolute
+                bottom: 0
+            &_bg-left
+                width: 0
+                height: 0
+                border-style: solid
+                border-width: 45px 0 45px 52px
+                border-color: transparent transparent transparent #ad6327
+                position: absolute
+            &_bg-right
+                width: 0
+                height: 0
+                border-style: solid
+                border-width: 45px 52px 45px 0
+                border-color: transparent #fbb76f transparent transparent
+                width: 384px
+                position: absolute
+                bottom: 0
             &-text
                 background: linear-gradient(15deg, #bd0500 15%, #eb0600 50%, #f42100)
                 color: $accent-text
@@ -217,7 +260,7 @@ body
                 transform: scale(0.9)
             &:hover>div:hover
                 transform: scale(1.1)
-            .col-3
+            &-item
                 transition: all .5s
         &-text
             position: absolute
@@ -238,6 +281,7 @@ body
         &-1
             background-image: url(../img/tour-1.png)
             background-position: 50% 50%
+            margin-right: 48px
             &::before
                 content: ''
                 display: inline-block
@@ -251,6 +295,7 @@ body
         &-2
             background-image: url(../img/tour-2.png)
             background-position: 50% 50%
+            margin-right: 51px
             &::before
                 content: ''
                 display: inline-block
@@ -264,7 +309,7 @@ body
         &-3
             background-image: url(../img/tour-3.png)
             background-position: 50% 50%
-            z-index: 2
+            margin-right: 34px
             &::before
                 content: ''
                 display: inline-block
@@ -309,3 +354,17 @@ body
                     text-transform: uppercase
                     letter-spacing: 0.73px
                     padding: 0 12px
+
+.footer
+    margin-top: 55px
+    
+    &-turtle
+        animation: turtle 2s linear infinite
+    p
+        font-size: 58px
+        color: $main-text
+        text-transform: uppercase
+        letter-spacing: 0.7px
+        white-space: nowrap
+        margin-left: -45px
+        margin-bottom: 0
