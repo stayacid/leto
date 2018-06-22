@@ -6,11 +6,12 @@ body
     background-color: $bg
     background-size: cover
     background-image: url(../img/bg.jpg)
-    background-size: 100%
+    background-size: 100% 100%
     background-repeat: no-repeat
     font-family: "Segoe UI Black", sans-serif
     font-weight: 400
     overflow-x: hidden //чтобы самолетик скрыть
+    font-size: 25px
 
 .container
     max-width: 1200px
@@ -18,6 +19,9 @@ body
 .header-logo
     margin-top: 20px
     text-align: center
+    img
+        max-width: 295px
+        width: 52%
 
 .p-0 //убрать паддинги у колонки (потому что используется только сетка бутстрап)
     padding: 0
@@ -37,16 +41,16 @@ body
     text-align: center
     &-offer //Предложение, от которого вы не сможете отказаться
         color: $main-text
-        font-size: 50px
+        font-size: 2em
         letter-spacing: 0.61px
         margin-bottom: 100px
         text-transform: uppercase
         &_big
-            font-size: 58px
+            font-size: 1.16em
             letter-spacing: 0.7px
         &_price
             color: $accent-text
-            font-size: 79px
+            font-size: 1.362em
             letter-spacing: 0.96px
             &-rub
                 font-weight: 800
@@ -133,7 +137,7 @@ body
             &-text
                 background: linear-gradient(15deg, #bd0500 15%, #eb0600 50%, #f42100)
                 color: $accent-text
-                font-size: 73px
+                font-size: 2.92em
                 padding-top: 4px
                 text-transform: uppercase
                 left: 0
@@ -247,7 +251,7 @@ body
         box-shadow: inset 0 0 0 10px #fff, -8px 8px 2px 1px rgba(0, 0, 0, 0.5), inset -8px 8px 2px 10px rgba(0, 0, 0, 0.5)
         color: #fff
         cursor: pointer
-        font-size: 35px
+        font-size: 1.4em
         height: 251px
         letter-spacing: 0.43px
         line-height: 36px
@@ -277,7 +281,7 @@ body
                 margin: 0
             &_small
                 color: $main-text
-                font-size: 28px
+                font-size: .8em
                 font-stretch: ultra-condensed
                 letter-spacing: 0.34px
                 line-height: 30px
@@ -353,7 +357,7 @@ body
             &-text
                 color: #fff
                 display: inline-block
-                font-size: 60px
+                font-size: 2.4em
                 letter-spacing: 0.73px
                 margin: 0
                 margin-top: -30px
@@ -362,14 +366,12 @@ body
 
 .footer
     margin-top: 55px
-    
     &-turtle //Черепашка в футере
         animation: turtle 2s linear infinite
     p
         color: $main-text
-        font-size: 58px
+        font-size: 3.1vw
         letter-spacing: 0.7px
         margin-bottom: 0
-        margin-left: -45px
         text-transform: uppercase
         white-space: nowrap
