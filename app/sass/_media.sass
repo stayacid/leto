@@ -5,35 +5,117 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 1024px)
-	.header-plane
-        	display: none
-	.header-logo img
-        	max-width: 156px
-	.p-0
-        	padding: 0 15px !important //нехорошо так делать(
-	h2.main-offer
-		margin-top: 5px
-		margin-bottom: 25px
+@media only screen and (max-width : 1200px)
+	.header-logo
+		max-width: 240px
+	.main-offer
 		font-size: 1.25em
-	span.main-offer_big
-        	font-size: 1.25em
-	span.main-offer_price
-        	font-size: 1.5em
+		margin-bottom: 4%
+		margin-top: 0
+	.main-offer_big
+		font-size: 1em
 	.main-agree
-		transform: scale(.75)
+		transform: scale(0.8)
+		margin-bottom: 5%
+	.main-tour_bg-border
+		border: 5px solid #fff
+		border-radius: 3px
+		filter: drop-shadow(-4px 4px 1px rgba(0, 0, 0, 0.5))
+		legend
+			padding: 0 17% 10px 17%
+	.main-tour_bg-text
+		font-size: 1.5em
+	.main-tour-text
+		bottom: -50%
+		font-size: 0.65em
+	.main-tour-2
+		margin-right: 6% //было 5
+	.main-tour-3
+		margin-right: 5% //было 5
+	.main-tour_image
+		img:first-of-type
+			box-shadow: 0 0 0 5px #fff, -8px 8px 2px 1px rgba(0, 0, 0, 0.5)
+	.footer
+		margin-top: 3%
+	.footer-turtle img
+		max-width: 100px
 
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
-	/**/
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
-
+@media only screen and (max-width : 872px)
+	.header-plane
+		display: none
+	.header-logo
+		max-width: 180px
+	.main-agree
+		transform: scale(0.6)
+	.main-offer
+		margin-bottom: 0
+	.main-tour-text
+		font-size: 0.55em
+	.main-tour-text_small
+		font-size: 0.85em
+	.footer p
+		margin-top: 1%
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	.header-logo img
-        max-width: 116px
+@media only screen and (max-width : 767px) //415
+	body
+		background-image: url(../img/bg-mobile.jpg)
+	.header-logo
+		max-width: 116px
+	.main-offer
+		font-size: 1em
+		text-align: center
+	.main-agree
+		transform: scale(0.5)
+	.mobile-small
+		height: 165px
+	.p-0
+		padding: 0 15px
+	.main-tour
+		margin-bottom: 15%
+	.main-tour_bg-text
+		font-size: 1.1em
+	.main-tour_bg-border
+		height: 105vw //???
+		legend
+			padding: 0 24% 25px 24%
+	.main-tour-1, .main-tour-3
+		margin-right: 12%
+	.main-tour-text
+		font-size: 0.65em
+		bottom: -45%
+	.main-tour-text_small
+		font-size: 0.8em
+		line-height: 18px
+		white-space: normal
+	.main-tour-1 .main-tour-text_small
+		width: 120px //wtf?
+	.footer
+		margin-top: 10%
+		p
+			font-size: .9em
+			margin-top: 5%
+			white-space: normal
+	.footer-turtle img
+		max-width: 66px
+
+@media only screen and (max-width : 480px) //385
+	.main-offer_big
+		font-size: 0.85em
+	.main-tour
+		margin-bottom: 25%
+	.main-tour_bg-border
+		height: 125vw
+	.main-tour_bg-border legend
+		padding: 0 30% 25px 30%
+	.main-tour-text
+		bottom: -60%
+		font-size: 0.45em
+	.main-tour-text_small
+		font-size: 1em
+		line-height: 18px
+		white-space: normal
+	.main-tour-1 .main-tour-text_small
+		width: 97px //wtf?

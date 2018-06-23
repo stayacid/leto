@@ -1,12 +1,20 @@
 @import "animation"
 @import "colors"
-@import "media"
+
+@font-face 
+    font-family: "Segoe UI Black"
+    src: url("../fonts/SegoeUIBlack.eot")
+    src: url("../fonts/SegoeUIBlack.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/SegoeUIBlack.woff") format("woff"), 
+    url("../fonts/SegoeUIBlack.ttf") format("truetype")
+    font-style: normal
+    font-weight: bold
+
 
 body
     background-color: $bg
-    background-size: cover
     background-image: url(../img/bg.jpg)
-    background-size: 100% 100%
+    background-size: cover
     background-repeat: no-repeat
     font-family: "Segoe UI Black", sans-serif
     font-weight: 400
@@ -14,14 +22,15 @@ body
     font-size: 25px
 
 .container
-    max-width: 1200px
+    max-width: 1200px //чтобы считать ширину элементов от него
 
 .header-logo
     margin-top: 20px
-    text-align: center
+    margin: 2% auto
+    max-width: 295px
     img
-        max-width: 295px
-        width: 52%
+        width: 100%
+        height: auto
 
 .p-0 //убрать паддинги у колонки (потому что используется только сетка бутстрап)
     padding: 0
@@ -33,17 +42,15 @@ body
     left: -232px
     position: absolute
     top: 53px
-    width: 232px
+    width: 232px //нельзя в процентах, чтобы не уменьшался
 
 .main
-    margin-bottom: 45px
-    margin-top: 25px
     text-align: center
     &-offer //Предложение, от которого вы не сможете отказаться
         color: $main-text
         font-size: 2em
         letter-spacing: 0.61px
-        margin-bottom: 100px
+        margin-bottom: 8%
         text-transform: uppercase
         &_big
             font-size: 1.16em
@@ -57,15 +64,14 @@ body
     &-agree //Бревно
         align-items: center
         background-image: url(../img/wood.png)
+        background-size: 100% 100%
         display: flex
         height: 204px
         justify-content: center
-        margin-bottom: 65px
+        margin-bottom: 10%
         position: relative
         width: 575px
         &_button //Кнопка, очевидно
-            //background-color: $agree-button
-            //background-image: url(../img/button_bg.jpg)
             border-radius: 12px
             border: 10px solid $border
             box-shadow: -2px 1px 2px 1px rgba(3, 20, 21, 0.82), /* inset 9px -9px 0px 0px #ad6327, inset -9px 9px 0px 0px #fbb76f,  */
@@ -248,15 +254,14 @@ body
 
     &-tour //Карточки с  путевками
         border-radius: 50%
-        box-shadow: inset 0 0 0 10px #fff, -8px 8px 2px 1px rgba(0, 0, 0, 0.5), inset -8px 8px 2px 10px rgba(0, 0, 0, 0.5)
+        //box-shadow: inset 0 0 0 10px #fff, -8px 8px 2px 1px rgba(0, 0, 0, 0.5), inset -8px 8px 2px 10px rgba(0, 0, 0, 0.5)
         color: #fff
         cursor: pointer
         font-size: 1.4em
-        height: 251px
         letter-spacing: 0.43px
         line-height: 36px
-        margin-bottom: 90px
-        margin-top: 17px
+        margin-bottom: 8%
+        margin-top: 2%
         position: relative
         text-shadow: 2px 3px 3px #000
         text-transform: uppercase
@@ -272,8 +277,8 @@ body
             &:hover>div:hover
                 transform: scale(1.1)
         &-text
-            bottom: -85px
-            left: 140px
+            bottom: -35%
+            left: 50%
             position: absolute
             transform: translateX(-50%)
             white-space: nowrap
@@ -287,58 +292,36 @@ body
                 line-height: 30px
                 text-shadow: none
                 transform: scaleX(.8)
+        &_image
+            img:first-of-type
+                width: 100%
+                height: auto
+                box-shadow: 0 0 0 10px #fff, -16px 16px 2px 1px rgba(0, 0, 0, 0.5)
+                border-radius: 50%
+            img:last-of-type
+                position: absolute
+                max-width: 154px
+                width: 61%
+                bottom: -5%
+                right: -20%
+                z-index: 2
+            &-shadow
+                position: absolute
+                width: 100%
+                height: 100%
+                box-shadow: inset -8px 8px 2px 1px rgba(0, 0, 0, 0.5)
+                border-radius: 50%
+                top: 0
+                left: 0
         &-1
-            background-image: url(../img/tour-1.png)
-            background-position: 50% 50%
-            margin-right: 48px
-            &::before
-                background-image: url(../img/tours-before.png)
-                background-position: 0px -7px
-                bottom: -10px
-                content: ''
-                display: inline-block
-                height: 165px
-                position: absolute
-                width: 155px
+            margin-right: 4%
         &-2
-            background-image: url(../img/tour-2.png)
-            background-position: 50% 50%
-            margin-right: 51px
-            &::before
-                background-image: url(../img/tours-before.png)
-                background-position: -288px -1px
-                bottom: -20px
-                content: ''
-                display: inline-block
-                height: 185px
-                position: absolute
-                width: 185px
+            margin-right: 4.5%
         &-3
-            background-image: url(../img/tour-3.png)
-            background-position: 50% 50%
-            margin-right: 34px
-            &::before
-                background-image: url(../img/tours-before.png)
-                background-position: -600px -40px
-                bottom: -20px
-                content: ''
-                display: inline-block
-                height: 146px
-                position: absolute
-                width: 155px
+            margin-right: 3%
         &-4
-            background-image: url(../img/tour-4.png)
-            background-position: 50% 50%
-            &::before
-                background-image: url(../img/tours-before.png)
-                background-position: -907px -11px
-                bottom: -10px
-                content: ''
-                display: inline-block
-                height: 165px
-                position: absolute
-                right: -50px
-                width: 155px
+
+
         &_bg //Рамка для путевок
             position: relative
             width: 100%
@@ -346,14 +329,15 @@ body
                 border-radius: 20px
                 border: 10px solid #fff
                 filter: drop-shadow(-8px 8px 1px rgba(0, 0, 0, 0.5))
-                height: 230px
+                height: 500%
                 left: 0
-                margin: 0 0 50px 0
+                margin: 0 0 50% 0
                 padding: 0
                 position: absolute
                 width: 100%
                 legend
-                    padding: 0 170px 10px 170px
+                    text-align: center
+                    padding: 0 14% 10px 14%
             &-text
                 color: #fff
                 display: inline-block
@@ -365,13 +349,15 @@ body
                 text-transform: uppercase
 
 .footer
-    margin-top: 55px
+    margin-top: 6%
     &-turtle //Черепашка в футере
         animation: turtle 2s linear infinite
     p
         color: $main-text
         font-size: 3.1vw
         letter-spacing: 0.7px
-        margin-bottom: 0
+        margin-bottom: 1%
         text-transform: uppercase
         white-space: nowrap
+
+@import "media"
