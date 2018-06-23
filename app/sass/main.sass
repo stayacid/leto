@@ -1,11 +1,20 @@
 @import "animation"
 @import "colors"
 
+@font-face 
+    font-family: "Segoe UI Black"
+    src: url("../fonts/SegoeUIBlack.eot")
+    src: url("../fonts/SegoeUIBlack.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/SegoeUIBlack.woff") format("woff"), 
+    url("../fonts/SegoeUIBlack.ttf") format("truetype")
+    font-style: normal
+    font-weight: bold
+
+
 body
     background-color: $bg
-    background-size: cover
     background-image: url(../img/bg.jpg)
-    background-size: 100% auto
+    background-size: cover
     background-repeat: no-repeat
     font-family: "Segoe UI Black", sans-serif
     font-weight: 400
@@ -13,7 +22,7 @@ body
     font-size: 25px
 
 .container
-    max-width: 62.5%
+    max-width: 1200px //чтобы считать ширину элементов от него
 
 .header-logo
     margin-top: 20px
@@ -36,8 +45,6 @@ body
     width: 232px //нельзя в процентах, чтобы не уменьшался
 
 .main
-    margin-bottom: 4%
-    margin-top: 2.5%
     text-align: center
     &-offer //Предложение, от которого вы не сможете отказаться
         color: $main-text
@@ -61,7 +68,7 @@ body
         display: flex
         height: 204px
         justify-content: center
-        margin-bottom: 65px
+        margin-bottom: 10%
         position: relative
         width: 575px
         &_button //Кнопка, очевидно
@@ -270,8 +277,8 @@ body
             &:hover>div:hover
                 transform: scale(1.1)
         &-text
-            bottom: -85px
-            left: 140px
+            bottom: -35%
+            left: 50%
             position: absolute
             transform: translateX(-50%)
             white-space: nowrap
@@ -324,12 +331,13 @@ body
                 filter: drop-shadow(-8px 8px 1px rgba(0, 0, 0, 0.5))
                 height: 500%
                 left: 0
-                margin: 0 0 50px 0
+                margin: 0 0 50% 0
                 padding: 0
                 position: absolute
                 width: 100%
                 legend
-                    padding: 0 170px 10px 170px
+                    text-align: center
+                    padding: 0 14% 10px 14%
             &-text
                 color: #fff
                 display: inline-block
@@ -341,14 +349,14 @@ body
                 text-transform: uppercase
 
 .footer
-    margin-top: 55px
+    margin-top: 6%
     &-turtle //Черепашка в футере
         animation: turtle 2s linear infinite
     p
         color: $main-text
         font-size: 3.1vw
         letter-spacing: 0.7px
-        margin-bottom: 0
+        margin-bottom: 1%
         text-transform: uppercase
         white-space: nowrap
 
