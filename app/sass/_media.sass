@@ -68,7 +68,7 @@
 		font-size: 1em
 		text-align: center
 	.main-agree
-		transform: scale(0.5)
+		//transform: scale(0.5)
 	.mobile-small
 		height: 165px
 	.p-0
@@ -101,11 +101,14 @@
 	.footer-turtle img
 		max-width: 66px
 
-@media only screen and (max-width : 480px) //385
+@media only screen and (max-width : 480px)
 	.main-offer_big
 		font-size: 0.85em
 	.main-tour
 		margin-bottom: 25%
+	.main-agree
+		transform: scale(0.5) translateX(-35%)
+		//margin-left: -50%
 	.main-tour_bg-border
 		height: 125vw
 	.main-tour_bg-border legend
@@ -119,3 +122,7 @@
 		white-space: normal
 	.main-tour-1 .main-tour-text_small
 		width: 97px //wtf?
+
+@media only screen and (max-width : 360px)
+	.main-agree
+		transform: scale(0.5) translateX(-45%)
