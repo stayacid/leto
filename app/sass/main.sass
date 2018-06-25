@@ -52,6 +52,7 @@ body
     height: 100%
     max-width: 232px //нельзя в процентах, чтобы не уменьшался
 
+
 .main
     text-align: center
     &-offer //Предложение, от которого вы не сможете отказаться
@@ -72,13 +73,18 @@ body
     &-agree //Бревно
         //align-items: center
         background-image: url(../img/wood.png)
-        //background-size: 100% 100%
+        background-position: 50% 50%
+        background-size: contain
+        background-repeat: no-repeat
         display: flex
         height: 204px
         justify-content: center
         margin-bottom: 10%
         position: relative
         width: 575px
+        &_wrapper
+            display: flex
+            justify-content: center
         &_button //Кнопка, очевидно
             border-radius: 12px
             border: 10px solid $border
