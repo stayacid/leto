@@ -27,8 +27,11 @@ body
     font-weight: 400
     font-size: 25px
 
+.main
+    min-height: 100%
+
 .container
-    max-width: 1200px //чтобы считать ширину элементов от него
+    max-width: 1200px
 
 .header-logo
     margin-top: 20px
@@ -39,7 +42,7 @@ body
         width: 100%
         height: auto
 
-.main-offer_br
+.hidden_br
     display: none
 
 .p-0 //убрать паддинги у колонки (потому что используется только сетка бутстрап)
@@ -85,7 +88,6 @@ body
         display: flex
         height: 204px
         justify-content: center
-        margin-bottom: 10%
         position: relative
         width: 575px
         &_wrapper
@@ -293,13 +295,12 @@ body
         &:hover .main-tour-text_small
             color: $accent-text
         &_wrapper
-            //display: flex
             &:hover>div
                 transform: scale(0.9)
             &:hover>div:hover
                 transform: scale(1.1)
         &-text
-            bottom: -35%
+            bottom: -90px
             left: 50%
             position: absolute
             transform: translateX(-50%)
@@ -354,11 +355,13 @@ body
         &_bg //Рамка для путевок
             position: relative
             width: 100%
+            margin-top: 100px
             &-border 
                 border-radius: 20px
                 border: 10px solid #fff
                 filter: drop-shadow(-8px 8px 1px rgba(0, 0, 0, 0.5))
                 height: 500%
+                height: 175px
                 left: 0
                 margin: 0 0 50% 0
                 padding: 0
@@ -366,7 +369,7 @@ body
                 width: 100%
                 legend
                     text-align: center
-                    padding: 0 14% 10px 14%
+                    padding: 0 170px 10px
             &-text
                 color: #fff
                 display: inline-block
@@ -379,6 +382,7 @@ body
 
 .footer
     margin-top: 6%
+    text-align: center
     &-turtle //Черепашка в футере
         animation: turtle 2s linear infinite
     p
